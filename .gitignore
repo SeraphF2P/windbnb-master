@@ -1,3 +1,5 @@
 **/node_modules
 **/prepros.config
 **/windbnb-master.css.map
+**/windbnb-master.d.ts
+**/json-parse-even-better-errors

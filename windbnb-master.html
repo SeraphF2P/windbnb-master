@@ -52,31 +52,7 @@
             placeholder="add guests"
             class="form-control"
           />
-          <i class="fa-solid fa-magnifying-glass input-group-text btn"></i>
-        </div>
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                <span>Edit your search</span>
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
-          </div>
+          <i class="fa-solid fa-magnifying-glass input-group-text btn btn-search"></i>
         </div>
       </div>
       <div class="section-two">
@@ -84,8 +60,8 @@
           <span class="stays-in">stays in filand</span
           ><span class="stays-num">12stays</span>
         </div>
-        <div class="search-result">
-          <div class="card">
+        <div class="gallary">
+          <!-- <div class="card">
             <img
               src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
               class="img-fluid"
@@ -94,82 +70,60 @@
             <div class="card-discreption">
               <span superHost="true">Super Host</span
               ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
+              ><i class="fa-solid fa-star rating" >4.44</i>
             </div>
             <h1 class="card-title">igiuygfijukhgj</h1>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-              class="img-fluid"
-              alt="..."
-            />
-            <div class="card-discreption">
-              <span superHost="true">Super Host</span
-              ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
+          </div> -->
+
+        </div>
+    </div>
+    <div class="accordion" >
+      <div class="accordion-item">
+        <h2 class="accordion-header" >
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="false"
+            aria-controls="collapseOne"
+          >
+           Edit your search
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <div class="input-group search-bar modified">
+              <input
+                type="text"
+                aria-label="LOCATION"
+                placeholder="add location"
+                class="form-control"
+              />
+              <input
+                type="text"
+                aria-label="GUESTS"
+                placeholder="add guests"
+                class="form-control"
+              />
+              <i class="fa-solid fa-magnifying-glass input-group-text btn btn-search rounded-pill">Search</i>
             </div>
-            <h1 class="card-title">igiuygfijukhgj</h1>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-              class="img-fluid"
-              alt="..."
-            />
-            <div class="card-discreption">
-              <span superHost="true">Super Host</span
-              ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
-            </div>
-            <h1 class="card-title">igiuygfijukhgj</h1>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-              class="img-fluid"
-              alt="..."
-            />
-            <div class="card-discreption">
-              <span superHost="true">Super Host</span
-              ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
-            </div>
-            <h1 class="card-title">igiuygfijukhgj</h1>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-              class="img-fluid"
-              alt="..."
-            />
-            <div class="card-discreption">
-              <span superHost="true">Super Host</span
-              ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
-            </div>
-            <h1 class="card-title">igiuygfijukhgj</h1>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-              class="img-fluid"
-              alt="..."
-            />
-            <div class="card-discreption">
-              <span superHost="true">Super Host</span
-              ><span class="type"> apartmet</span
-              ><i class="fa-solid fa-star rating">4.44</i>
-            </div>
-            <h1 class="card-title">igiuygfijukhgj</h1>
           </div>
         </div>
       </div>
     </div>
-    <script
+    <script type="module">var exports = {};</script> 
+    <script type="module"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./windbnb-master.js"></script>
+
   </body>
 </html>

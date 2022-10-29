@@ -1,31 +1,42 @@
+.container-fluid {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container-fluid::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body .accordion {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+body .accordion .accordion-button[aria-expanded=false] {
+  display: none;
+}
+body .accordion .accordion-button:not(.collapsed)::after {
+  visibility: hidden;
+}
+body .accordion .accordion-button:after {
+  visibility: hidden;
+}
+body .accordion .accordion-body {
+  background-color: white;
+  position: relative;
+  transform-origin: top;
+}
 body .container-fluid {
   padding: 18px;
+  padding-inline: 40px;
 }
 body .container-fluid > .row {
   position: relative;
 }
 body .container-fluid > .row div {
   position: absolute;
-}
-body .container-fluid .accordion {
-  display: none;
-  border-bottom: 1px solid;
-}
-body .container-fluid .accordion .accordion-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-body .container-fluid .accordion .accordion-button:not(.collapsed)::after {
-  visibility: hidden;
-}
-body .container-fluid .accordion .accordion-button:after {
-  visibility: hidden;
-}
-body .container-fluid .accordion .accordion-body {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 3;
 }
 body .container-fluid .search-bar {
   position: absolute;
@@ -58,6 +69,35 @@ body .container-fluid .search-bar span {
   font-size: 12px;
   line-height: 15px;
 }
+body .container-fluid .search-bar.modified {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 32px;
+  width: calc(100% - 20px);
+  left: 10px;
+  box-shadow: none;
+}
+body .container-fluid .search-bar.modified input {
+  width: calc(100% - 10px);
+  height: 57px;
+  border-radius: 0 0 16px 16px !important;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+body .container-fluid .search-bar.modified input:first-child {
+  border-radius: 16px 16px 0 0 !important;
+}
+body .container-fluid .search-bar.modified i {
+  width: 126px;
+  height: 48px;
+  display: flex;
+  background: rgba(235, 87, 87, 0.9);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  justify-self: end;
+}
 body .container-fluid .logo {
   width: 90px;
   position: absolute;
@@ -73,33 +113,33 @@ body .container-fluid .logo {
   justify-content: space-between;
   width: 100%;
 }
-.section-two .search-result {
+.section-two .gallary {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
   margin-top: 24px;
 }
-.section-two .search-result .card {
+.section-two .gallary .card {
+  flex-basis: 394px;
   margin-top: 17px;
   margin-bottom: 32px;
-  max-width: 394px;
   border: none;
 }
-.section-two .search-result .card img {
+.section-two .gallary .card img {
   min-width: 350px;
   max-width: 394px;
   min-height: 238.35px;
   max-height: 269px;
   border-radius: 24px;
 }
-.section-two .search-result .card .card-discreption {
+.section-two .gallary .card .card-discreption {
   display: flex;
   max-width: 394px;
   justify-content: space-between;
   margin-top: 19.5px;
 }
-.section-two .search-result .card .card-discreption [superHost=true] {
+.section-two .gallary .card .card-discreption [superHost=true] {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -113,10 +153,18 @@ body .container-fluid .logo {
   display: grid;
   place-content: center;
 }
-.section-two .search-result .card .card-discreption [superHost=false] {
+.section-two .gallary .card .card-discreption [superHost=true] span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+.section-two .gallary .card .card-discreption [superHost=false] {
   display: none;
 }
-.section-two .search-result .card .card-title {
+.section-two .gallary .card .card-title {
   margin-top: 17px;
   font-family: "Montserrat";
   font-style: normal;
@@ -127,7 +175,7 @@ body .container-fluid .logo {
 }
 
 @media (min-width: 576px) {
-  .container-fluid .input-group.search-bar {
+  .container-fluid .input-group.search-bar:not(.modified) {
     top: 32px;
     left: calc(100% - 297px);
   }
