@@ -1,0 +1,151 @@
+body {
+  .container-fluid {
+    padding: 18px;
+    > .row {
+      position: relative;
+      div {
+        position: absolute;
+      }
+    }
+    .accordion {
+      display: none;
+      border-bottom: 1px solid;
+      .accordion-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:not(.collapsed)::after {
+          visibility: hidden;
+        }
+        &:after {
+          visibility: hidden;
+        }
+      }
+      .accordion-body {
+        background-color: #ffffff;
+        position: relative;
+        z-index: 3;
+      }
+    }
+
+    .search-bar {
+      position: absolute;
+      top: 75px;
+      left: calc((100% - 297px) / 2);
+      display: flex;
+      width: 297px;
+      height: 55px;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      input {
+        border-block: none;
+        border-inline: 1px solid #f0f0f0;
+        &:first-child {
+          border: none;
+        }
+      }
+      i {
+        display: grid;
+      }
+      span {
+        width: 93px;
+        height: 15px;
+        left: 11px;
+        top: 18px;
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .logo {
+      width: 90px;
+      position: absolute;
+      top: 22px;
+    }
+  }
+}
+
+.section-two {
+  position: relative;
+  top: 162px;
+  .stays-found {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .search-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    .card {
+      margin-top: 17px;
+      margin-bottom: 32px;
+      max-width: 394px;
+      border: none;
+      img {
+        min-width: 350px;
+        max-width: 394px;
+        min-height: 238.35px;
+        max-height: 269px;
+        border-radius: 24px;
+      }
+      .card-discreption {
+        display: flex;
+        max-width: 394px;
+        justify-content: space-between;
+        margin-top: 19.5px;
+        [superHost="true"] {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 15px;
+          text-transform: uppercase;
+          width: 100px;
+          height: 28px;
+          border: 1px solid #4f4f4f;
+          border-radius: 12px;
+          display: grid;
+          place-content: center;
+        }
+        [superHost="false"] {
+          display: none;
+        }
+      }
+      .card-title {
+        margin-top: 17px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333333;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    .input-group {
+      &.search-bar {
+        top: 32px;
+        left: calc(100% - 297px);
+      }
+    }
+  }
+}
+// @media (min-width: 700px) {
+//   //   .card {
+//   //   }
+// }
+// @media (max-width: 576px) {
+//   .search-bar {
+//     top: 32px;
+//     left: calc((100% - 297px));
+//   }
+// }

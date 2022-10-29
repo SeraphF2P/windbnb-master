@@ -1,2 +1,3 @@
 **/node_modules
-**/ prepros.config
+**/prepros.config
+**/windbnb-master.css.map
